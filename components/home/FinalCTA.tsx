@@ -1,5 +1,4 @@
 import Button from '../common/Button'
-import metrics from '@/data/metrics.json'
 
 export default function FinalCTA() {
   const guarantees = [
