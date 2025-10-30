@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Button from './Button'
 
 export default function Header() {
@@ -21,11 +22,16 @@ export default function Header() {
       <nav className="container-custom py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-900 to-primary-500 rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-white font-bold text-xl">I</span>
+          <Link href="/" className="flex items-center group">
+            <div className="relative w-40 h-16 transition-transform group-hover:scale-105">
+              <Image
+                src="/logo.png"
+                alt="INERVET Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
-            <span className="text-2xl font-bold text-gray-900">INERVET</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -43,9 +49,16 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
-            <Button variant="primary" size="md" className="hidden sm:block">
-              지금 시작하기
-            </Button>
+            <a
+              href="https://www.aipetdoctor.co.kr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:block"
+            >
+              <Button variant="primary" size="md">
+                지금 시작하기
+              </Button>
+            </a>
 
             {/* Mobile Menu Button */}
             <button
@@ -79,9 +92,15 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <Button variant="primary" size="md" fullWidth>
-                지금 시작하기
-              </Button>
+              <a
+                href="https://www.aipetdoctor.co.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="primary" size="md" fullWidth>
+                  지금 시작하기
+                </Button>
+              </a>
             </div>
           </div>
         )}

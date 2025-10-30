@@ -4,6 +4,7 @@ import ScrollToTop from '@/components/common/ScrollToTop'
 import HeroSection from '@/components/home/HeroSection'
 import KeyMetrics from '@/components/home/KeyMetrics'
 import ProblemSection from '@/components/home/ProblemSection'
+import ServiceShowcase from '@/components/home/ServiceShowcase'
 import HowItWorks from '@/components/home/HowItWorks'
 import PricingSection from '@/components/home/PricingSection'
 import Testimonials from '@/components/home/Testimonials'
@@ -17,6 +18,7 @@ export default function Home() {
         <HeroSection />
         <KeyMetrics />
         <ProblemSection />
+        <ServiceShowcase />
         <HowItWorks />
         <PricingSection />
         <Testimonials />

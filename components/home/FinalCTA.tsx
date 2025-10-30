@@ -25,7 +25,7 @@ export default function FinalCTA() {
             <Button variant="primary" size="lg" className="bg-white text-primary-900 hover:bg-blue-50">
               무료로 시작하기
             </Button>
-            <Button variant="secondary" size="lg" className="border-white text-white hover:bg-white/10">
+            <Button variant="secondary" size="lg" className="!bg-transparent !border-white !text-white hover:!bg-white/10">
               가격 안내 보기
             </Button>
           </div>

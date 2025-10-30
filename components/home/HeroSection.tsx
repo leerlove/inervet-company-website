@@ -40,7 +40,7 @@ export default function HeroSection() {
             >
               지금 무료 상담 시작
             </Button>
-            <Button variant="secondary" size="lg" className="border-white text-white hover:bg-white/10">
+            <Button variant="secondary" size="lg" className="!bg-transparent !border-white !text-white hover:!bg-white/10">
               서비스 둘러보기
             </Button>
           </div>
