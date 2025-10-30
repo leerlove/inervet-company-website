@@ -1,0 +1,121 @@
+{
+  "company": {
+    "name": "INERVET Co., Ltd",
+    "nameKo": "주식회사 이너벳",
+    "vision": "반려동물 건강관리에 시간과 공간의 경계를 허무는 혁신을 추구",
+    "mission": "Innervation(지속 연결성)의 Innovation(혁신적인 데이터 기술)을 통해 Vet(전문 수의학)의 결합으로 미래 헬스케어 모델을 제시",
+    "coreService": "AI 펫닥터 - 디지털 AI 펫 헬스케어 서비스",
+    "coreFeatures": [
+      {
+        "title": "24시간 전담 AI 수의사",
+        "description": "개인화 학습을 통한 전담 AI수의사 맞춤 상담"
+      },
+      {
+        "title": "맞춤 영양 관리",
+        "description": "검증된 영양 정보와 개인화 기반 영양 상담 관리"
+      },
+      {
+        "title": "실시간 건강 모니터링",
+        "description": "AIoT 웨어러블 디바이스를 통한 실시간 데이터 수집"
+      },
+      {
+        "title": "디지털 진료 기록",
+        "description": "병원 진료부터 실시간 건강 관리까지 데이터 통합"
+      }
+    ]
+  },
+  "values": [
+    {
+      "icon": "innovation",
+      "title": "혁신 (Innovation)",
+      "description": "AI와 데이터 기술로 펫헬스케어의 새로운 표준을 만듭니다"
+    },
+    {
+      "icon": "connection",
+      "title": "연결성 (Innervation)",
+      "description": "시간과 공간의 제약 없이 반려동물과 보호자, 전문가를 연결합니다"
+    },
+    {
+      "icon": "expertise",
+      "title": "전문성 (Veterinary)",
+      "description": "수의학 전문 지식과 AI 기술의 완벽한 결합을 추구합니다"
+    },
+    {
+      "icon": "trust",
+      "title": "신뢰 (Trust)",
+      "description": "18,000건 이상의 상담으로 검증된 신뢰할 수 있는 서비스를 제공합니다"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2022",
+      "quarter": "",
+      "title": "앤리시 설립",
+      "description": "펫헬스케어 사업의 첫 발걸음, 앤리시 설립"
+    },
+    {
+      "year": "2023",
+      "quarter": "",
+      "title": "펫헬스케어 시장 검증",
+      "description": "펫 포레스트, 펫 브릿지, 펫 브레인 등 3개 사업을 통해 시장 검증 및 데이터 확보 가능성 검증"
+    },
+    {
+      "year": "2024",
+      "quarter": "Q2",
+      "title": "AI 펫닥터 MVP 런칭",
+      "description": "상담 정확도 85% 달성, Android, iOS 출시"
+    },
+    {
+      "year": "2024",
+      "quarter": "Q3",
+      "title": "체험단 검증 완료",
+      "description": "1,000명 대상 체험단 검증, 만족도 87%, 유료사용의사 98% 달성"
+    },
+    {
+      "year": "2024",
+      "quarter": "Q4",
+      "title": "파트너십 체결",
+      "description": "LGU+ PASS 계약 체결 및 펫 신원인증 업체 파트너십 체결"
+    },
+    {
+      "year": "2025",
+      "quarter": "Q2",
+      "title": "자연 유입 검증",
+      "description": "전환율 8%, 활성 시간 10분, 리텐션 25%, 회원 4,200명 달성"
+    },
+    {
+      "year": "2025",
+      "quarter": "Q3",
+      "title": "INERVET 법인 전환",
+      "description": "법인 전환을 통해 주식회사 이너벳(INERVET) 설립"
+    },
+    {
+      "year": "2025",
+      "quarter": "Q4",
+      "title": "신용보증기금 리틀팽귄 선정",
+      "description": "신용보증기금 리틀팽귄 프로그램에 선정"
+    }
+  ],
+  "ceo": {
+    "name": "이대섭",
+    "position": "대표이사",
+    "bio": "반려동물 양육 경험을 바탕으로 펫헬스케어 산업의 디지털 전환을 선도하고 있습니다. 전세계 반려동물 보호자가 위치와 시간에 관계없이 실시간으로 케어할 수 있는 시대를 만들어가고자 합니다.",
+    "experience": [
+      "클라우드 금융 컨설팅 15년",
+      "스타트업 상장사 기술팀장 역임",
+      "펫보험 자격 보유",
+      "펫푸드 마스터 과정 이수",
+      "펫 관련 3개 사업 수행 이력 보유"
+    ]
+  },
+  "office": {
+    "address": "충청남도 천안시 동남구 천안대로 396",
+    "addressDetail": "두정프라자 608호",
+    "phone": "041-562-1118",
+    "email": "dslee@inervet.com",
+    "business": {
+      "registration": "392-88-03447",
+      "representative": "이대섭"
+    }
+  }
+}

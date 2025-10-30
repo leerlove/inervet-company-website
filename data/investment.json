@@ -1,0 +1,210 @@
+{
+  "highlights": {
+    "stage": "Seed",
+    "amount": "4억원",
+    "preValue": "45억",
+    "roi": "투자 후 3년 내 5배 수익 (400%)",
+    "bep": "2026년 8월",
+    "achievements": [
+      "개인화 기반 전담 AI 수의사 모델",
+      "실고 편한 펫 맞춤 영양 관리",
+      "AIoT 기반 웨어러블 디바이스"
+    ],
+    "keyMetrics": [
+      {
+        "label": "병원, 상담, 펫푸드 데이터",
+        "value": "40,000건 이상 확보"
+      },
+      {
+        "label": "파트너십",
+        "value": "200만 고객 보유 펫 신원인증 업체"
+      },
+      {
+        "label": "B2B 계약",
+        "value": "LGU+ PASS 서비스 (25년 11월 오픈)"
+      }
+    ]
+  },
+  "market": {
+    "domestic": {
+      "tam": {
+        "value": "2조 1,600억",
+        "description": "펫 신원인증 등록 고객"
+      },
+      "sam": {
+        "value": "1조 3,000억",
+        "description": "아파트 내 반려가구"
+      },
+      "som": {
+        "value": "6,350억",
+        "description": "노령, 지병 등 지속 관리 필요"
+      }
+    },
+    "global": {
+      "japan": "434억 달러",
+      "china": "27억 달러"
+    },
+    "painPoints": [
+      {
+        "problem": "1주일 이상 방치 경험",
+        "rate": "76%",
+        "impact": "중증도 상승 수치 60~80% 증가"
+      },
+      {
+        "problem": "불필요한 진료비 발생",
+        "rate": "85%",
+        "impact": "치료비 2배 이상 증가 확률 40~60%"
+      },
+      {
+        "problem": "모르고 먹이는 펫 푸드",
+        "rate": "70%",
+        "impact": "합병증의 원인, 국내 펫 비만율 49%"
+      }
+    ]
+  },
+  "traction": {
+    "mvpResults": [
+      {
+        "metric": "만족도",
+        "value": "98%",
+        "description": "서비스 만족도"
+      },
+      {
+        "metric": "리텐션",
+        "value": "25%",
+        "description": "월간 리텐션"
+      },
+      {
+        "metric": "활성 시간",
+        "value": "10분",
+        "description": "1회 활성 시간"
+      },
+      {
+        "metric": "상담 데이터",
+        "value": "18,000건",
+        "description": "누적 데이터"
+      },
+      {
+        "metric": "운영 비용 절감",
+        "value": "30/1",
+        "description": "온프라인 대비"
+      },
+      {
+        "metric": "동물병원 DB",
+        "value": "2,300개",
+        "description": "검증된 데이터"
+      },
+      {
+        "metric": "펫 푸드 DB",
+        "value": "2,900개",
+        "description": "검증된 데이터"
+      }
+    ],
+    "achievements": [
+      {
+        "title": "MVP 고객 검증",
+        "description": "누적 사용자 1만명 이상, 회원 4,200명 확보"
+      },
+      {
+        "title": "VIP 고객 확보",
+        "description": "얼리어댑터 고객 50명 확보"
+      },
+      {
+        "title": "핵심 파트너 확보",
+        "description": "펫 신원 인증 1위 기업 파트너십 체결"
+      },
+      {
+        "title": "통신사 계약 체결",
+        "description": "LGU+ PASS 앱내 서비스 도입 계약 (25년 8월 오픈)"
+      },
+      {
+        "title": "펫 데이터 플로우 구축",
+        "description": "펫 상담 데이터 18,000건, 시장 데이터 5,000건 이상 확보"
+      },
+      {
+        "title": "특허 포트폴리오 구축",
+        "description": "상표권 2건, 특허 2건 출원"
+      }
+    ]
+  },
+  "financials": {
+    "bepPlan": {
+      "start": {
+        "period": "2025년 9월",
+        "revenue": "월 670만원"
+      },
+      "target": {
+        "period": "2026년 8월",
+        "revenue": "월 3억 9천만원",
+        "growth": "58배 성장"
+      }
+    },
+    "metrics": {
+      "arpu": "7,770원",
+      "ltvCac": "7.17배",
+      "grossMargin": "20-73.3%"
+    },
+    "projections": [
+      {
+        "year": "2027",
+        "revenue": "248억",
+        "profit": "75억"
+      },
+      {
+        "year": "2028",
+        "revenue": "569억",
+        "profit": "220억"
+      },
+      {
+        "year": "2029",
+        "revenue": "965억",
+        "profit": "406억",
+        "cumulativeProfit": "714억"
+      }
+    ]
+  },
+  "roadmap": [
+    {
+      "stage": "1.0 STAGE 1",
+      "year": "2024",
+      "title": "24시간 나만의 수의사",
+      "description": "개인화 기반 AI 수의사 모델",
+      "status": "completed"
+    },
+    {
+      "stage": "2.0 STAGE 2",
+      "year": "2025",
+      "title": "AI 펫 헬스케어 서비스 안착",
+      "description": "의료, 건강, 영양까지 개인화 확대",
+      "status": "in_progress"
+    },
+    {
+      "stage": "3.0 STAGE 3",
+      "year": "2026",
+      "title": "수익 모델 확대",
+      "description": "보험, 펀드 등 수익 모델 확대",
+      "status": "planned"
+    },
+    {
+      "stage": "Global STAGE 4",
+      "year": "2026",
+      "title": "글로벌 서비스 확장",
+      "description": "일본, 호주 등 글로벌 진출",
+      "status": "planned"
+    },
+    {
+      "stage": "4.0 STAGE 5",
+      "year": "2028",
+      "title": "글로벌 DTx 시장 구축",
+      "description": "디지털 치료제 시장 진입",
+      "status": "planned"
+    },
+    {
+      "stage": "Scaleups STAGE 6",
+      "year": "2029",
+      "title": "EXIT (M&A)",
+      "description": "글로벌 펫 기업 M&A",
+      "status": "planned"
+    }
+  ]
+}
