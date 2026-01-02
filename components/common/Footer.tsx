@@ -1,26 +1,14 @@
 import Link from 'next/link'
+import {
+  FOOTER_SERVICE_LINKS,
+  FOOTER_COMPANY_LINKS,
+  FOOTER_SUPPORT_LINKS,
+} from '@/constants/externalLinks'
 
 export default function Footer() {
-  const serviceLinks = [
-    { name: 'AI 펫닥터', href: '/service' },
-    { name: '24시간 상담', href: '/service' },
-    { name: '가격 안내', href: '#pricing' },
-    { name: '이용 방법', href: '#how-it-works' },
-  ]
-
-  const companyLinks = [
-    { name: '회사 소개', href: '/about' },
-    { name: '팀', href: '/about#team' },
-    { name: '투자 정보 (IR)', href: '/ir' },
-    { name: '채용', href: '/careers' },
-  ]
-
-  const supportLinks = [
-    { name: 'FAQ', href: '/faq' },
-    { name: '문의하기', href: '/contact' },
-    { name: '이용약관', href: '/terms' },
-    { name: '개인정보처리방침', href: '/privacy' },
-  ]
+  const serviceLinks = FOOTER_SERVICE_LINKS
+  const companyLinks = FOOTER_COMPANY_LINKS
+  const supportLinks = FOOTER_SUPPORT_LINKS
 
   const socialLinks = [
     {
@@ -119,7 +107,7 @@ export default function Footer() {
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label={social.name}
                 >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     {social.icon}
                   </svg>
                 </a>

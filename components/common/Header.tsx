@@ -4,18 +4,20 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Button from './Button'
+import { EXTERNAL_LINKS } from '@/constants/externalLinks'
+import type { NavLink } from '@/types'
+
+const navigation: NavLink[] = [
+  { name: '서비스', href: '/' },
+  { name: '이용 방법', href: '/#how-it-works' },
+  { name: '가격 안내', href: '/#pricing' },
+  { name: '회사 소개', href: '/about' },
+  { name: '투자 정보', href: '/ir' },
+  { name: '문의', href: '/contact' },
+]
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  const navigation = [
-    { name: '서비스', href: '/' },
-    { name: '이용 방법', href: '/#how-it-works' },
-    { name: '가격 안내', href: '/#pricing' },
-    { name: '회사 소개', href: '/about' },
-    { name: '투자 정보', href: '/ir' },
-    { name: '문의', href: '/contact' },
-  ]
 
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 animate-fade-in">
@@ -50,7 +52,7 @@ export default function Header() {
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
             <a
-              href="https://www.aipetdoctor.co.kr"
+              href={EXTERNAL_LINKS.APP_MAIN}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:block"
@@ -93,7 +95,7 @@ export default function Header() {
                 </Link>
               ))}
               <a
-                href="https://www.aipetdoctor.co.kr"
+                href={EXTERNAL_LINKS.APP_MAIN}
                 target="_blank"
                 rel="noopener noreferrer"
               >
