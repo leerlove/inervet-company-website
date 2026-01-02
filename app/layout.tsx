@@ -71,6 +71,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#1e3a8a" />
       </head>
       <body className="antialiased">
+        {/* Skip to Content - Accessibility */}
+        <a href="#main-content" className="skip-to-content">
+          본문으로 바로가기
+        </a>
         {children}
       </body>
     </html>
