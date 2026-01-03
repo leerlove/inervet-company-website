@@ -1,3 +1,6 @@
+import StepCard from './StepCard'
+import SectionHeader from '../common/SectionHeader'
+
 export default function HowItWorks() {
   const steps = [
     {
@@ -97,60 +100,27 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="section bg-white">
       <div className="container-custom">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            INERVET AI 펫닥터가 해결합니다
-          </h2>
-          <p className="text-lg text-gray-600">간단한 4단계로 전담 AI 수의사와 상담하세요</p>
-        </div>
+        <SectionHeader
+          title="INERVET AI 펫닥터가 해결합니다"
+          description="간단한 4단계로 전담 AI 수의사와 상담하세요"
+          className="max-w-3xl mx-auto"
+        />
 
         <div className="max-w-5xl mx-auto space-y-12 lg:space-y-16">
           {steps.map((step, index) => (
-            <div
+            <StepCard
               key={index}
-              className={`flex flex-col ${
-                index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-              } items-center gap-8`}
-            >
-              {/* Visual */}
-              <div className="flex-shrink-0 w-full lg:w-1/2">
-                <div
-                  className={`bg-gradient-to-br ${step.bgGradient} rounded-2xl p-8 lg:p-12 h-64 flex items-center justify-center`}
-                >
-                  <div className="text-center">
-                    <div
-                      className={`w-20 h-20 ${step.iconBg} rounded-2xl flex items-center justify-center mx-auto mb-4`}
-                    >
-                      {step.icon}
-                    </div>
-                    <span className="text-6xl font-bold text-gray-900/20">{step.number}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="flex-1">
-                <div className={`inline-block px-4 py-1 ${step.badgeColor} rounded-full text-sm font-semibold mb-4`}>
-                  {step.badge}
-                </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">{step.title}</h3>
-                <p className="text-lg text-gray-600 leading-relaxed mb-4">{step.description}</p>
-                <ul className="space-y-2">
-                  {step.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-2 text-gray-600">
-                      <svg className="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+              number={step.number}
+              badge={step.badge}
+              badgeColor={step.badgeColor}
+              title={step.title}
+              description={step.description}
+              features={step.features}
+              icon={step.icon}
+              bgGradient={step.bgGradient}
+              iconBg={step.iconBg}
+              reverse={index % 2 !== 0}
+            />
           ))}
         </div>
       </div>
