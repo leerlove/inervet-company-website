@@ -10,7 +10,6 @@ import type { NavLink } from '@/types'
 const navigation: NavLink[] = [
   { name: '서비스', href: '/' },
   { name: '이용 방법', href: '/#how-it-works' },
-  { name: '가격 안내', href: '/#pricing' },
   { name: '회사 소개', href: '/about' },
   { name: '투자 정보', href: '/ir' },
   { name: '문의', href: '/contact' },

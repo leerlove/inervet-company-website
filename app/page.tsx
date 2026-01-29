@@ -6,7 +6,6 @@ import KeyMetrics from '@/components/home/KeyMetrics'
 import ProblemSection from '@/components/home/ProblemSection'
 import ServiceShowcase from '@/components/home/ServiceShowcase'
 import HowItWorks from '@/components/home/HowItWorks'
-import PricingSection from '@/components/home/PricingSection'
 import Testimonials from '@/components/home/Testimonials'
 import FinalCTA from '@/components/home/FinalCTA'
 
@@ -20,7 +19,6 @@ export default function Home() {
         <ProblemSection />
         <ServiceShowcase />
         <HowItWorks />
-        <PricingSection />
         <Testimonials />
         <FinalCTA />
       </main>

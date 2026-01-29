@@ -42,7 +42,6 @@ export const INTERNAL_LINKS = {
 
 export const NAVIGATION_LINKS = [
   { name: 'AI 펫닥터', href: '/#features' },
-  { name: '가격', href: '/#pricing' },
   { name: '회사소개', href: '/about' },
   { name: 'IR', href: '/ir' },
   { name: '문의', href: '/contact' },
@@ -51,7 +50,6 @@ export const NAVIGATION_LINKS = [
 export const FOOTER_SERVICE_LINKS = [
   { name: 'AI 펫닥터', href: '/service' },
   { name: '24시간 상담', href: '/service' },
-  { name: '가격 안내', href: '/#pricing' },
   { name: '이용 방법', href: '/#how-it-works' },
 ] as const
 
