@@ -150,11 +150,11 @@ export default function TermsPage() {
                       <ul className="text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>AI 수의사 상담 서비스 (24시간)</span>
+                          <span>소변진단 키트를 통한 질병, 영양 등 13개 영역 진단 및 결과 보고서</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>AI 영양사 상담 서비스</span>
+                          <span>소변진단 키트 검사결과 상담을 위한 전담 AI 수의사와 상담</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-green-500">✓</span>
@@ -162,7 +162,7 @@ export default function TermsPage() {
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>커뮤니티 서비스 (단지펫톡)</span>
+                          <span>펫푸드(사료, 영양제, 간식)에 대한 정보 제공과 반려동물의 영양궁합 정보 제공</span>
                         </li>
                       </ul>
                     </div>
@@ -311,37 +311,6 @@ export default function TermsPage() {
                       </p>
                     </div>
 
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">구독 요금제</h3>
-                      <div className="overflow-x-auto">
-                        <table className="w-full text-sm">
-                          <thead>
-                            <tr className="bg-gray-50">
-                              <th className="text-left py-3 px-4 font-semibold text-gray-900">요금제</th>
-                              <th className="text-left py-3 px-4 font-semibold text-gray-900">가격</th>
-                              <th className="text-left py-3 px-4 font-semibold text-gray-900">주요 기능</th>
-                            </tr>
-                          </thead>
-                          <tbody className="divide-y divide-gray-100">
-                            <tr>
-                              <td className="py-3 px-4 text-gray-600">스탠다드 라이트</td>
-                              <td className="py-3 px-4 text-gray-900 font-medium">3,900원/월</td>
-                              <td className="py-3 px-4 text-gray-600">AI 상담 월 40~50회, 병원 검색</td>
-                            </tr>
-                            <tr>
-                              <td className="py-3 px-4 text-gray-600">스탠다드</td>
-                              <td className="py-3 px-4 text-gray-900 font-medium">9,900원/월</td>
-                              <td className="py-3 px-4 text-gray-600">AI 상담 확대, 예약 기록</td>
-                            </tr>
-                            <tr>
-                              <td className="py-3 px-4 text-gray-600">프리미엄</td>
-                              <td className="py-3 px-4 text-gray-900 font-medium">15,900원/월</td>
-                              <td className="py-3 px-4 text-gray-600">무제한 AI 상담, 영양 궁합 월 50회</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
                   </div>
                 </article>
 
