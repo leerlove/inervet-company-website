@@ -4,8 +4,7 @@
 - **프로젝트명**: INERVET 회사 웹사이트
 - **기술 스택**: Next.js 14, TypeScript, Tailwind CSS
 - **GitHub**: https://github.com/leerlove/inervet-company-website
-- **Vercel**: https://vercel.com/leer0524-gmailcoms-projects/inervet-web
-- **임시 URL**: https://inervet-hu86kwris-leer0524-gmailcoms-projects.vercel.app
+- **Production URL**: https://inervet-web.vercel.app
 - **목표 도메인**: https://inervet.com
 
 ---
@@ -13,161 +12,75 @@
 ## 완료된 작업
 
 ### 1. 웹사이트 개발 (✅ 완료)
-- [x] 메인 페이지 (Hero, KeyMetrics, Problem, HowItWorks, Pricing, Testimonials, FinalCTA)
+- [x] 메인 페이지 (Hero, KeyMetrics, Problem, ServiceShowcase, HowItWorks, Testimonials, FinalCTA)
 - [x] 회사 소개 페이지 (/about)
 - [x] 투자 정보 페이지 (/ir)
 - [x] 문의 페이지 (/contact)
-- [x] 공통 컴포넌트 (Header, Footer, Button, ScrollToTop)
+- [x] 이용약관 페이지 (/terms)
+- [x] 개인정보처리방침 페이지 (/privacy)
+- [x] FAQ 페이지 (/faq)
+- [x] 공통 컴포넌트 (Header, Footer, Button, ScrollToTop, Card, SectionHeader)
 
 ### 2. 로고 및 이미지 적용 (✅ 완료)
 - [x] 회사 로고 (logo.png) 헤더에 적용
 - [x] 로고 크기 최적화 (w-40 h-16)
 - [x] AI 펫닥터 서비스 스크린샷 추가
-  - AI 펫닥터 메인 화면
-  - AI 펫닥터 영양 관리 화면
 - [x] ServiceShowcase 컴포넌트 생성
 
 ### 3. 외부 링크 연결 (✅ 완료)
 - [x] "지금 시작하기" 버튼 → https://www.aipetdoctor.co.kr
-- [x] 헤더 CTA 버튼 링크 적용 (데스크탑/모바일)
-- [x] ServiceShowcase CTA 버튼 링크 적용
+- [x] 헤더 CTA 버튼 링크 적용
+- [x] 중앙 집중식 URL 관리 (constants/externalLinks.ts)
 
-### 4. UI 개선 (✅ 완료)
-- [x] Secondary 버튼 가시성 수정 (어두운 배경에서 흰색 테두리/텍스트)
-- [x] 서비스 이미지 카드 최적화 (object-contain, 고정 높이)
+### 4. 코드 품질 개선 (✅ 완료)
+- [x] TypeScript 타입 정의 파일 생성 (types/index.ts)
+- [x] 재사용 가능한 컴포넌트 생성
+  - Card.tsx - 범용 카드 컴포넌트
+  - SectionHeader.tsx - 섹션 헤더 컴포넌트
+  - StepCard.tsx - HowItWorks용 스텝 카드
+  - PricingCard.tsx - 가격 플랜 카드
+- [x] 컴포넌트 리팩토링 (HowItWorks, PricingSection에 재사용 컴포넌트 적용)
+- [x] 접근성 개선 (skip-to-content, aria-hidden, prefers-reduced-motion)
 
-### 5. Git 저장소 관리 (✅ 완료)
-- [x] GitHub 저장소 연결
-- [x] .gitignore 설정 (개발 파일 제외)
-- [x] 불필요한 파일 제거 (.claude/, asset/, issue/, prototype/)
-- [x] 3개 커밋 완료
-  - Initial commit
-  - 개발 파일 정리
-  - 로고 및 서비스 쇼케이스 추가
+### 5. ContactForm EmailJS 연동 (✅ 완료)
+- [x] @emailjs/browser 패키지 설치
+- [x] 환경변수 기반 설정 지원
+- [x] 로딩 상태 및 성공/에러 UI 추가
+- [x] 폼 제출 시 검증 및 피드백
 
-### 6. Vercel 배포 (✅ 완료)
+### 6. 이용약관 페이지 (✅ 완료)
+- [x] 서비스 이용약관, 면책조항, 위치정보 이용약관
+- [x] 유료 서비스 약관, 환불 정책
+- [x] 반응형 목차 (데스크탑 사이드바 / 모바일 드롭다운)
+
+#### 최근 수정사항
+- **제7조 (서비스 제공)** 업데이트:
+  1. 소변진단 키트를 통한 질병, 영양 등 13개 영역 진단 및 결과 보고서
+  2. 소변진단 키트 검사결과 상담을 위한 전담 AI 수의사와 상담
+  3. 동물병원 검색 및 예약 서비스
+  4. 펫푸드(사료, 영양제, 간식)에 대한 정보 제공과 반려동물의 영양궁합 정보 제공
+
+- **유료 서비스 정의** 업데이트:
+  - 멤버십 회원 서비스: 월 정기 결제를 통해 소변진단키트의 검사와 상세 리포트 등을 이용하는 멤버십 서비스
+  - 제공 상품: 반려동물 전용 소변진단키트 배송 및 건강 진단 레포트, AI 진단 결과 상담 서비스
+
+- **제거된 항목**: 구독 요금제 테이블 (백업 완료)
+
+### 7. 가격 섹션 백업 및 제거 (✅ 완료)
+- [x] 백업 파일 생성: `docs/backup/pricing-backup.md`
+- [x] 메인 페이지에서 PricingSection 제거
+- [x] 헤더 네비게이션에서 "가격 안내" 링크 제거
+- [x] Footer에서 "가격 안내" 링크 제거
+
+**유지된 파일 (나중에 복원 가능)**:
+- `components/home/PricingSection.tsx`
+- `components/home/PricingCard.tsx`
+- `data/pricing.json`
+
+### 8. Vercel 배포 (✅ 완료)
 - [x] Vercel CLI 설치 및 로그인
-- [x] leer0524-gmailcoms-projects 계정으로 배포
-- [x] ESLint 오류 수정 (unused import)
-- [x] 프로덕션 배포 성공
-
----
-
-## 현재 진행 중인 작업
-
-### 도메인 연결 및 SSL 설정 (🔄 진행 중)
-
-#### 현재 상황
-- **도메인**: inervet.com
-- **문제**: SSL 인증서가 적용되지 않음
-- **원인 분석**:
-  1. DNS 설정은 올바르게 구성됨 (A 레코드: @ → 76.76.21.21)
-  2. 실제 DNS 조회 시 `216.198.79.1` 반환 (이전 호스팅 서버)
-  3. DNS 전파가 완료되지 않았거나 설정이 저장되지 않음
-  4. Vercel에서 도메인이 다른 프로젝트에 할당되어 있음
-
-#### DNS 설정 상태
-```
-✅ A 레코드 (@) → 76.76.21.21 (TTL: 3600)
-⚠️ A 레코드 (www) → 76.76.21.21 (권장: CNAME → cname.vercel-dns.com)
-✅ A 레코드 (*) → 76.76.21.21 (TTL: 86400)
-✅ MX, TXT 레코드 정상
-```
-
----
-
-## 다음 진행 사항
-
-### 1. DNS 전파 완료 대기 (우선순위: 높음)
-- [ ] DNS 설정 화면에서 "저장" 버튼 클릭 확인
-- [ ] 10-30분 대기 후 DNS 전파 확인
-  ```bash
-  nslookup inervet.com
-  ```
-- [ ] https://dnschecker.org 에서 글로벌 DNS 전파 확인
-- [ ] IP 주소가 `76.76.21.21`로 변경되었는지 확인
-
-### 2. www 서브도메인 최적화 (우선순위: 중간)
-DNS 설정에서 www 레코드 수정:
-```
-현재: A 레코드 (www) → 76.76.21.21
-변경: CNAME 레코드 (www) → cname.vercel-dns.com
-```
-
-### 3. Vercel 프로젝트에 도메인 연결 (우선순위: 높음)
-DNS 전파 완료 후:
-1. Vercel 대시보드 접속: https://vercel.com/leer0524-gmailcoms-projects
-2. 기존에 `inervet.com`이 연결된 프로젝트 찾기
-3. 해당 프로젝트에서 도메인 제거
-4. `inervet-web` 프로젝트로 이동
-5. Settings > Domains에서 `inervet.com` 추가
-6. SSL 인증서 자동 발급 대기 (1-5분)
-
-### 4. SSL 인증서 확인 (우선순위: 높음)
-- [ ] https://inervet.com 접속 확인
-- [ ] SSL 인증서 유효성 확인 (Let's Encrypt)
-- [ ] https://www.inervet.com 리다이렉트 확인
-
-### 5. 최종 테스트 (우선순위: 중간)
-- [ ] 모든 페이지 정상 작동 확인
-  - https://inervet.com
-  - https://inervet.com/about
-  - https://inervet.com/ir
-  - https://inervet.com/contact
-- [ ] 외부 링크 작동 확인 (AI 펫닥터 사이트)
-- [ ] 모바일 반응형 확인
-- [ ] 크로스 브라우저 테스트 (Chrome, Safari, Edge)
-
----
-
-## 알려진 이슈
-
-### 1. DNS 전파 지연
-- **상태**: 진행 중
-- **설명**: DNS 설정이 실제로 적용되지 않음 (216.198.79.1 → 76.76.21.21 변경 필요)
-- **조치**: 도메인 등록업체에서 설정 저장 확인 후 전파 대기
-
-### 2. Vercel 도메인 할당 충돌
-- **상태**: 미해결
-- **설명**: `inervet.com`이 이미 다른 Vercel 프로젝트에 할당되어 있음
-- **조치**: 대시보드에서 기존 프로젝트 찾아서 도메인 제거 필요
-
----
-
-## 필요한 정보
-
-1. **도메인 등록업체**: (확인 필요 - Gabia, 후이즈, GoDaddy 등)
-2. **DNS 설정 저장 여부**: 설정 후 "저장" 또는 "적용" 버튼 클릭 확인 필요
-3. **기존 Vercel 프로젝트**: `inervet.com`이 연결된 다른 프로젝트 확인 필요
-
----
-
-## 참고 자료
-
-### 커맨드
-```bash
-# Vercel 로그인 확인
-vercel whoami
-
-# 도메인 목록 확인
-vercel domains ls
-
-# DNS 조회
-nslookup inervet.com
-
-# 프로덕션 배포
-vercel --prod
-
-# Git 상태 확인
-git status
-git log --oneline -5
-```
-
-### URL
-- GitHub: https://github.com/leerlove/inervet-company-website
-- Vercel 프로젝트: https://vercel.com/leer0524-gmailcoms-projects/inervet-web
-- DNS Checker: https://dnschecker.org
-- Vercel 도메인 문서: https://vercel.com/docs/concepts/projects/domains
+- [x] 프로덕션 배포 완료
+- [x] 자동 배포 설정 (GitHub push 시)
 
 ---
 
@@ -177,52 +90,117 @@ git log --oneline -5
 inervet-web/
 ├── app/
 │   ├── page.tsx              # 메인 페이지
-│   ├── about/
-│   │   └── page.tsx          # 회사 소개
-│   ├── ir/
-│   │   └── page.tsx          # 투자 정보
-│   ├── contact/
-│   │   └── page.tsx          # 문의
-│   ├── layout.tsx
-│   └── globals.css
+│   ├── layout.tsx            # 레이아웃 (skip-to-content 포함)
+│   ├── globals.css           # 전역 스타일 (접근성 스타일 포함)
+│   ├── about/page.tsx        # 회사 소개
+│   ├── ir/page.tsx           # 투자 정보
+│   ├── contact/page.tsx      # 문의
+│   ├── terms/page.tsx        # 이용약관
+│   ├── privacy/page.tsx      # 개인정보처리방침
+│   └── faq/page.tsx          # FAQ
 ├── components/
 │   ├── common/
 │   │   ├── Header.tsx
 │   │   ├── Footer.tsx
 │   │   ├── Button.tsx
-│   │   └── ScrollToTop.tsx
+│   │   ├── ScrollToTop.tsx
+│   │   ├── Card.tsx          # 재사용 카드 컴포넌트
+│   │   └── SectionHeader.tsx # 재사용 섹션 헤더
 │   ├── home/
 │   │   ├── HeroSection.tsx
 │   │   ├── KeyMetrics.tsx
 │   │   ├── ProblemSection.tsx
-│   │   ├── ServiceShowcase.tsx  # 새로 추가
+│   │   ├── ServiceShowcase.tsx
 │   │   ├── HowItWorks.tsx
-│   │   ├── PricingSection.tsx
+│   │   ├── StepCard.tsx      # HowItWorks용 카드
+│   │   ├── PricingSection.tsx # (미사용, 백업됨)
+│   │   ├── PricingCard.tsx   # (미사용, 백업됨)
 │   │   ├── Testimonials.tsx
 │   │   └── FinalCTA.tsx
-│   ├── about/
-│   ├── ir/
-│   └── contact/
+│   ├── contact/
+│   │   └── ContactForm.tsx   # EmailJS 연동
+│   └── ...
+├── constants/
+│   └── externalLinks.ts      # URL 상수 관리
+├── types/
+│   └── index.ts              # TypeScript 타입 정의
 ├── data/
 │   ├── metrics.json
-│   ├── team.json
-│   ├── investment.json
-│   └── contact.json
-├── public/
-│   ├── logo.png                      # 회사 로고
-│   ├── ai-pet-doctor-main.png        # AI 펫닥터 메인
-│   └── ai-pet-doctor-nutrition.png   # AI 펫닥터 영양관리
-└── docs/
-
-제외된 폴더 (gitignore):
-├── .claude/           # IDE 설정
-├── asset/             # 개발용 이미지
-├── issue/             # 스크린샷
-└── prototype/         # HTML 프로토타입
+│   ├── pricing.json          # (미사용, 백업됨)
+│   └── ...
+├── docs/
+│   ├── inervet_website_plan.md
+│   └── backup/
+│       └── pricing-backup.md # 가격 정보 백업
+└── public/
+    ├── logo.png
+    └── ...
 ```
 
 ---
 
-**최종 업데이트**: 2025-10-31 03:30 (KST)
+## 환경 설정
+
+### EmailJS 설정 (선택사항)
+Contact Form에서 실제 이메일을 수신하려면:
+```env
+# .env.local
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+---
+
+## 배포 명령어
+
+```bash
+# 개발 서버 실행
+npm run dev
+
+# 빌드 테스트
+npm run build
+
+# Vercel 배포
+vercel --prod --token YOUR_TOKEN
+
+# Git 커밋 및 푸시
+git add -A && git commit -m "message" && git push origin main
+```
+
+---
+
+## 다음 진행 예정 사항
+
+### 우선순위 높음
+- [ ] 도메인(inervet.com) 연결 및 SSL 설정
+- [ ] EmailJS 실제 설정 (이메일 수신 테스트)
+
+### 우선순위 중간
+- [ ] 가격 섹션 복원 (새로운 가격 정책 확정 후)
+- [ ] SEO 최적화 (메타데이터, OG 이미지)
+- [ ] 성능 최적화 (이미지 최적화, 코드 스플리팅)
+
+### 우선순위 낮음
+- [ ] 다국어 지원 (영어, 일본어)
+- [ ] 블로그/뉴스 섹션
+- [ ] 고객 대시보드
+
+---
+
+## Git 커밋 히스토리 (최근)
+
+```
+0722717 fix: update paid service definitions in terms page
+1c3ace4 feat: backup and remove pricing section for future update
+533cfcd fix: update terms page - modify service provision and remove pricing table
+527ab74 feat: add FAQ page, EmailJS integration, and component refactoring
+fa983f0 refactor: code quality improvements and component optimization
+ab927ab feat: add terms and privacy pages with accessibility improvements
+```
+
+---
+
+**최종 업데이트**: 2025-01-29
 **작성자**: Claude Code
-**프로젝트 진행률**: 85% (배포 완료, 도메인 연결 대기 중)
+**프로젝트 진행률**: 90% (기능 개발 완료, 도메인 연결 대기 중)
