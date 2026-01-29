@@ -298,11 +298,11 @@ export default function TermsPage() {
                       <ul className="text-gray-600 space-y-2">
                         <li className="flex items-start gap-2">
                           <span className="text-primary-600 font-bold">•</span>
-                          <span><strong>구독형 서비스</strong>: 월 정기 결제를 통해 AI 상담 무제한, 상세 리포트 등을 이용하는 멤버십 서비스</span>
+                          <span><strong>멤버십 회원 서비스</strong>: 월 정기 결제를 통해 소변진단키트의 검사와 상세 리포트 등을 이용하는 멤버십 서비스</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-primary-600 font-bold">•</span>
-                          <span><strong>상품 구매</strong>: 소변진단키트 등 실물 배송 상품</span>
+                          <span><strong>제공 상품</strong>: 반려동물 전용 소변진단키트 배송 및 건강 진단 레포트, AI 진단 결과 상담 서비스</span>
                         </li>
                       </ul>
                       <p className="text-gray-600 mt-4">
