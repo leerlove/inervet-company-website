@@ -27,7 +27,7 @@ export default function HomeCTA() {
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-sm font-semibold tracking-wide text-primary-900 transition-all hover:-translate-y-0.5 hover:bg-blue-50"
               >
-                부동산 AI 전환 문의
+                AI 네이티브 전환 문의
               </a>
               <a
                 href={EXTERNAL_LINKS.APP_MAIN}

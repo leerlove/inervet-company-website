@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { EXTERNAL_LINKS } from '@/constants/externalLinks'
 
 const BUSINESS = [
+  { name: 'AI 네이티브 전환', href: '/transformation', external: false, desc: 'FDE·온톨로지 기반 전환 컨설팅 (B2B)' },
   { name: 'AI 펫닥터', href: EXTERNAL_LINKS.APP_MAIN, external: true, desc: '반려동물 AI 건강상담 (B2C)' },
-  { name: '부동산 AI 전환', href: '/real-estate', external: false, desc: 'AI 네이티브 전환 컨설팅 (B2B)' },
 ]
 
 const NAV = [

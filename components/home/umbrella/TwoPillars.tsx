@@ -5,26 +5,26 @@ import { EXTERNAL_LINKS } from '@/constants/externalLinks'
 
 const PILLARS = [
   {
+    tag: 'Consulting · B2B',
+    title: 'AI 네이티브 전환',
+    desc: 'FDE가 직접 고객사에 투입되어, 온톨로지 기반으로 그 기업만의 AI 네이티브 구조를 설계·구축합니다. 지금은 토지개발·부동산 섹터에 집중합니다.',
+    href: '/transformation',
+    external: false,
+    cta: '전환 컨설팅 보기',
+    ring: 'hover:border-primary-400/60',
+    glow: 'from-primary-500/20',
+    tagColor: 'text-primary-300',
+  },
+  {
     tag: 'Product · B2C',
     title: 'AI 펫닥터',
-    desc: '24시간 반려동물 AI 건강 상담. 수만 건의 상담으로 검증된, 우리가 직접 만들고 운영하는 첫 AI 제품입니다.',
+    desc: '우리가 직접 만들고 운영하는 첫 AI 제품. 수만 건의 상담으로 우리의 AI 실행력을 시장에서 증명하고 있습니다.',
     href: EXTERNAL_LINKS.APP_MAIN,
     external: true,
     cta: '서비스 보기',
     ring: 'hover:border-accent-500/60',
     glow: 'from-accent-500/20',
     tagColor: 'text-accent-300',
-  },
-  {
-    tag: 'Consulting · B2B',
-    title: '부동산 AI 네이티브 전환',
-    desc: '진단부터 설계·구축·운영까지. 부동산 산업의 AI 전환을 실행 단계까지 함께 설계하는 컨설팅입니다.',
-    href: '/contact',
-    external: false,
-    cta: '컨설팅 문의',
-    ring: 'hover:border-primary-400/60',
-    glow: 'from-primary-500/20',
-    tagColor: 'text-primary-300',
   },
 ]
 

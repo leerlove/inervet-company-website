@@ -145,16 +145,16 @@ export default function CinematicHero() {
             </span>
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-blue-100/90 sm:text-lg">
-            수만 건의 상담으로 검증한 AI 실행력으로,
+            고객사에 직접 투입되는 FDE와 온톨로지 기반 설계로,
             <br className="hidden sm:block" />
-            이제 부동산 산업의 AI 네이티브 전환을 함께합니다.
+            그 기업만의 AI 네이티브 전환을 실행합니다.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
-              href="/contact"
+              href="/transformation"
               className="inline-flex items-center justify-center rounded-lg bg-white px-7 py-3.5 text-sm font-semibold tracking-wide text-primary-900 transition-all hover:-translate-y-0.5 hover:bg-blue-50"
             >
-              부동산 AI 전환 문의
+              AI 네이티브 전환 알아보기
             </a>
             <a
               href={EXTERNAL_LINKS.APP_MAIN}

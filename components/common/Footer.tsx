@@ -2,8 +2,8 @@ import Link from 'next/link'
 import { EXTERNAL_LINKS } from '@/constants/externalLinks'
 
 const BUSINESS_LINKS = [
+  { name: 'AI 네이티브 전환', href: '/transformation', external: false },
   { name: 'AI 펫닥터', href: EXTERNAL_LINKS.APP_MAIN, external: true },
-  { name: '부동산 AI 전환', href: '/real-estate', external: false },
 ]
 
 const COMPANY_LINKS = [
