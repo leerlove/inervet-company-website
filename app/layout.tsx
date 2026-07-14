@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'AI 펫닥터 INERVET | 24시간 반려동물 건강 상담 서비스',
-  description: '반려동물이 아플 때 24시간 언제든 수의사와 상담하세요. AI 증상 분석과 실시간 영상 상담으로 18,000건 이상의 상담 완료.',
-  keywords: ['AI 펫닥터', '반려동물', '수의사 상담', '24시간 상담', '펫헬스케어', 'INERVET'],
+  title: 'INERVET | AI 네이티브 전환 회사',
+  description: 'AI 펫닥터를 만든 팀이 이끄는 AI 네이티브 전환 회사. 직접 만들고 운영하는 AI 실행력으로 산업의 전환을 함께합니다.',
+  keywords: ['INERVET', 'AI 네이티브 전환', 'AI 컨설팅', '부동산 AI', 'AI 펫닥터', '펫헬스케어'],
   authors: [{ name: 'INERVET' }],
   creator: 'INERVET',
   publisher: 'INERVET',
