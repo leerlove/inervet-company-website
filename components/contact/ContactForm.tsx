@@ -1,30 +1,25 @@
 'use client'
 
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 import Reveal from '@/components/common/Reveal'
 
 type InquiryType = 'general' | 'investment' | 'partnership'
 type SubmitStatus = 'idle' | 'loading' | 'success' | 'error'
 
-// EmailJS 설정 - 실제 사용 시 환경변수로 대체 권장
-const EMAILJS_CONFIG = {
-  serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
-  templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
-  publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY',
+const EMPTY_FORM = {
+  name: '',
+  email: '',
+  phone: '',
+  subject: '',
+  message: '',
+  company: '', // 허니팟: 사람은 비워둔다. 값이 차 있으면 서버가 봇으로 간주
 }
 
 export default function ContactForm() {
   const [inquiryType, setInquiryType] = useState<InquiryType>('general')
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>('idle')
   const [errorMessage, setErrorMessage] = useState('')
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  })
+  const [formData, setFormData] = useState(EMPTY_FORM)
 
   const inquiryTabs = [
     { id: 'general' as InquiryType, label: '일반 문의' },
@@ -32,51 +27,34 @@ export default function ContactForm() {
     { id: 'partnership' as InquiryType, label: '파트너 문의' },
   ]
 
-  const getInquiryTypeLabel = (type: InquiryType): string => {
-    const labels: Record<InquiryType, string> = {
-      general: '일반 문의',
-      investment: '투자 문의',
-      partnership: '파트너 문의',
-    }
-    return labels[type]
-  }
-
+  /** 서버(/api/contact)에서 Google Workspace SMTP로 발송한다. 키는 서버에만 존재. */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setSubmitStatus('loading')
     setErrorMessage('')
 
-    // EmailJS 설정이 완료되지 않은 경우 콘솔 출력 후 성공 처리
-    if (EMAILJS_CONFIG.serviceId === 'YOUR_SERVICE_ID') {
-      console.log('EmailJS 미설정 - 폼 데이터:', { inquiryType, ...formData })
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
-      return
-    }
-
     try {
-      const templateParams = {
-        inquiry_type: getInquiryTypeLabel(inquiryType),
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone || '미입력',
-        subject: formData.subject,
-        message: formData.message,
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ inquiryType, ...formData }),
+      })
+      const data = await res.json().catch(() => ({}))
+
+      if (!res.ok) {
+        setSubmitStatus('error')
+        setErrorMessage(
+          data?.error || '문의 전송에 실패했습니다. 잠시 후 다시 시도해주세요.'
+        )
+        return
       }
 
-      await emailjs.send(
-        EMAILJS_CONFIG.serviceId,
-        EMAILJS_CONFIG.templateId,
-        templateParams,
-        EMAILJS_CONFIG.publicKey
-      )
-
       setSubmitStatus('success')
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+      setFormData(EMPTY_FORM)
     } catch (error) {
-      console.error('EmailJS 전송 실패:', error)
+      console.error('문의 전송 실패:', error)
       setSubmitStatus('error')
-      setErrorMessage('문의 전송에 실패했습니다. 잠시 후 다시 시도해주세요.')
+      setErrorMessage('네트워크 오류로 전송하지 못했습니다. 잠시 후 다시 시도해주세요.')
     }
   }
 
@@ -115,6 +93,20 @@ export default function ContactForm() {
 
             {/* Contact Form */}
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* 허니팟 — 화면·스크린리더 모두에서 숨김. 봇이 채우면 서버가 걸러낸다 */}
+              <div className="absolute -left-[9999px]" aria-hidden="true">
+                <label htmlFor="company">회사명 (입력하지 마세요)</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={formData.company}
+                  onChange={handleChange}
+                />
+              </div>
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className={labelClasses}>
