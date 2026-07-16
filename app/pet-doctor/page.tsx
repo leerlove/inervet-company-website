@@ -26,6 +26,10 @@ const FEATURES = [
   { title: '맞춤 리포트', desc: '우리 아이의 상태를 정리한 맞춤형 분석 리포트를 받아볼 수 있습니다.' },
   { title: '펫존', desc: '지도 기반으로 반려동물과 함께 갈 수 있는 장소 정보를 찾아볼 수 있습니다.' },
   { title: '핫플레이스', desc: '반려동물 동반 업체를 소개하는 매거진으로 새로운 곳을 발견하세요.' },
+  {
+    title: '영양 궁합',
+    desc: '간단한 사진 촬영으로 다양한 펫푸드를 바로 분석하여 우리 아이 맞춤 영양 정보를 제공합니다.',
+  },
 ]
 
 export default function PetDoctorPage() {
@@ -42,18 +46,18 @@ export default function PetDoctorPage() {
                 Product · AI Pet Doctor
               </p>
               <Image
-                src="/logo-aipetdoctor.svg"
+                src="/logo-aipetdoctor.png"
                 alt="AI 펫닥터"
-                width={300}
-                height={150}
+                width={630}
+                height={175}
                 priority
-                className="mb-8 h-14 w-auto sm:h-16"
+                className="mb-8 h-12 w-auto sm:h-14"
               />
               <h1 className="max-w-4xl text-4xl font-bold leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">
-                24시간 반려동물
+                초개인화 기반
                 <br />
                 <span className="bg-gradient-to-r from-accent-300 via-primary-300 to-accent-200 bg-clip-text text-transparent">
-                  AI 건강 상담
+                  AI 펫 헬스케어
                 </span>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg">
