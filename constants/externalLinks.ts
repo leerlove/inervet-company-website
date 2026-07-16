@@ -6,8 +6,9 @@
 export const EXTERNAL_LINKS = {
   // AI 펫닥터 서비스
   APP_MAIN: 'https://www.aipetdoctor.co.kr',
-  APP_DOWNLOAD_IOS: 'https://apps.apple.com/kr/app/ai-petdoctor',
-  APP_DOWNLOAD_ANDROID: 'https://play.google.com/store/apps/details?id=com.inervet.aipetdoctor',
+  APP_DOWNLOAD_IOS:
+    'https://apps.apple.com/kr/app/ai-%ED%8E%AB%EB%8B%A5%ED%84%B0-%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC-24%EC%8B%9C-%EA%B1%B4%EA%B0%95%EC%83%81%EB%8B%B4/id6484592134',
+  APP_DOWNLOAD_ANDROID: 'https://play.google.com/store/apps/details?id=com.anlicy.petdoctor',
 
   // 회사 정보
   COMPANY_EMAIL: 'mailto:support@inervet.com',

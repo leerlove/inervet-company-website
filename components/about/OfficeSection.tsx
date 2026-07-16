@@ -1,4 +1,5 @@
 import companyData from '@/data/company.json'
+import Reveal from '@/components/common/Reveal'
 
 export default function OfficeSection() {
   const { office } = companyData
@@ -35,66 +36,75 @@ export default function OfficeSection() {
   ]
 
   return (
-    <section className="section bg-white">
+    <section className="py-24 lg:py-32 border-t border-white/5">
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            회사 정보
-          </h2>
-        </div>
+        <Reveal>
+          <div className="text-center mb-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-accent-400 mb-4">
+              Contact
+            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              회사 정보
+            </h2>
+          </div>
+        </Reveal>
 
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Info */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">연락처</h3>
-              {contactItems.map((item, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-900">
-                    {item.icon}
+            <Reveal>
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-white mb-6">연락처</h3>
+                {contactItems.map((item, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-white/[0.05] border border-white/10 rounded-lg flex items-center justify-center text-accent-400">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-500 mb-1">
+                        {item.label}
+                      </p>
+                      <p className="text-white font-medium">
+                        {item.value}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            {/* Business Info */}
+            <Reveal delay={0.1}>
+              <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">사업자 정보</h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm font-semibold text-gray-500 mb-1">
+                      상호
+                    </p>
+                    <p className="text-white font-medium">
+                      주식회사 이너벳 (INERVET Co., Ltd)
+                    </p>
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-gray-500 mb-1">
-                      {item.label}
+                      사업자등록번호
                     </p>
-                    <p className="text-gray-900 font-medium">
-                      {item.value}
+                    <p className="text-white font-medium">
+                      {office.business.registration}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-500 mb-1">
+                      대표자
+                    </p>
+                    <p className="text-white font-medium">
+                      {office.business.representative}
                     </p>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            {/* Business Info */}
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">사업자 정보</h3>
-              <div className="space-y-4">
-                <div>
-                  <p className="text-sm font-semibold text-gray-500 mb-1">
-                    상호
-                  </p>
-                  <p className="text-gray-900 font-medium">
-                    주식회사 이너벳 (INERVET Co., Ltd)
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-gray-500 mb-1">
-                    사업자등록번호
-                  </p>
-                  <p className="text-gray-900 font-medium">
-                    {office.business.registration}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-gray-500 mb-1">
-                    대표자
-                  </p>
-                  <p className="text-gray-900 font-medium">
-                    {office.business.representative}
-                  </p>
-                </div>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </div>

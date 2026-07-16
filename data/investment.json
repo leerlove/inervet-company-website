@@ -1,10 +1,26 @@
 {
   "highlights": {
     "stage": "Seed",
-    "amount": "4억원",
-    "preValue": "45억",
-    "roi": "투자 후 3년 내 5배 수익 (400%)",
-    "bep": "2026년 8월",
+    "businessLines": [
+      {
+        "label": "AI 네이티브 전환 컨설팅",
+        "description": "FDE 상주 + 온톨로지 기반 맞춤 전환 (토지개발·부동산 섹터 집중)"
+      },
+      {
+        "label": "AI 펫닥터",
+        "description": "실행력을 증명하는 B2C AI 펫 헬스케어"
+      }
+    ],
+    "heroHighlights": [
+      {
+        "label": "제조업 전환 비용 절감",
+        "value": "45%+"
+      },
+      {
+        "label": "펫닥터 서비스 만족도",
+        "value": "98%"
+      }
+    ],
     "achievements": [
       "개인화 기반 전담 AI 수의사 모델",
       "실고 편한 펫 맞춤 영양 관리",
@@ -62,6 +78,61 @@
       }
     ]
   },
+  "consultingMarket": {
+    "eyebrow": "AI Native Transformation",
+    "title": "AI 전환 컨설팅 시장",
+    "description": "엔터프라이즈의 AI 네이티브 전환 수요가 산업 전반에서 빠르게 확대되고 있습니다.",
+    "stats": [
+      {
+        "label": "글로벌 엔터프라이즈 AI 시장",
+        "value": "420억 달러 → 1,552억 달러",
+        "detail": "2026년 → 2030년, 연평균 37.6% 성장",
+        "source": "Grand View Research, 2025"
+      },
+      {
+        "label": "글로벌 에이전틱 AI 시장",
+        "value": "75.5억 달러 → 1,990.5억 달러",
+        "detail": "2025년 → 2034년, 연평균 43.8% 성장",
+        "source": "Precedence Research, 2025"
+      },
+      {
+        "label": "국내 AI 시장",
+        "value": "3조 4,385억원 → 4조 4,636억원",
+        "detail": "2025년 → 2027년, 연평균 14.3% 성장",
+        "source": "IDC AI Tracker (Invest Korea 재인용), 2023"
+      }
+    ],
+    "industryStats": [
+      {
+        "label": "글로벌 건설 산업 AI 시장",
+        "value": "29.3억 달러 → 169.6억 달러",
+        "detail": "2023년 → 2030년, 연평균 26.9% 성장",
+        "source": "Grand View Research, 2024"
+      },
+      {
+        "label": "글로벌 부동산 산업 AI 시장",
+        "value": "3,030억 달러 → 9,890억 달러",
+        "detail": "2025년 → 2029년, 연평균 34.4% 성장",
+        "source": "Research and Markets, 2025"
+      }
+    ]
+  },
+  "consultingTraction": [
+    {
+      "period": "2026년 2월 ~ 4월",
+      "title": "제조업 AI 네이티브 전환",
+      "client": "국내 제조 기업 (3D 컨셉 도면 설계)",
+      "description": "고객 미팅 → 제품 기획 → 컨셉 도면 설계 → 수정 → 최종 도면 생성 → 맞춤 업체 연결까지 수동 프로세스를 자동화",
+      "result": "비용 45% 이상 절감"
+    },
+    {
+      "period": "2026년 6월 ~ 진행중",
+      "title": "토지개발사 AI 네이티브 전환 MVP",
+      "client": "국내 토지개발 전문 기업",
+      "description": "토지개발 법률·인허가·동향을 자동 반영해 인사이트 도출, Agent가 사업 진행 의사결정 가이드, 사업계획서·투자의뢰서·공공기관 제출 문서 자동 생성",
+      "result": "전사 확장 예정"
+    }
+  ],
   "traction": {
     "mvpResults": [
       {
@@ -128,38 +199,27 @@
     ]
   },
   "financials": {
-    "bepPlan": {
-      "start": {
-        "period": "2025년 9월",
-        "revenue": "월 670만원"
-      },
-      "target": {
-        "period": "2026년 8월",
-        "revenue": "월 3억 9천만원",
-        "growth": "58배 성장"
-      }
+    "bepOutlook": {
+      "title": "BEP 조기 달성 목표",
+      "description": "서비스 정식 런칭 이후 가파른 성장 곡선을 그리며 손익분기점 조기 달성을 목표로 하고 있습니다."
     },
     "metrics": {
       "arpu": "7,770원",
       "ltvCac": "7.17배",
       "grossMargin": "20-73.3%"
     },
-    "projections": [
+    "growthOutlook": [
       {
         "year": "2027",
-        "revenue": "248억",
-        "profit": "75억"
+        "description": "본격적 매출 성장 국면 진입, 컨설팅 사업 확장"
       },
       {
         "year": "2028",
-        "revenue": "569억",
-        "profit": "220억"
+        "description": "손익분기점 이후 이익 확대, 안정적 수익 구조 확보"
       },
       {
         "year": "2029",
-        "revenue": "965억",
-        "profit": "406억",
-        "cumulativeProfit": "714억"
+        "description": "글로벌 확장과 함께 지속가능한 수익성 달성"
       }
     ]
   },
@@ -176,14 +236,14 @@
       "year": "2025",
       "title": "AI 펫 헬스케어 서비스 안착",
       "description": "의료, 건강, 영양까지 개인화 확대",
-      "status": "in_progress"
+      "status": "completed"
     },
     {
       "stage": "3.0 STAGE 3",
       "year": "2026",
       "title": "수익 모델 확대",
       "description": "보험, 펀드 등 수익 모델 확대",
-      "status": "planned"
+      "status": "in_progress"
     },
     {
       "stage": "Global STAGE 4",
@@ -204,6 +264,43 @@
       "year": "2029",
       "title": "EXIT (M&A)",
       "description": "글로벌 펫 기업 M&A",
+      "status": "planned"
+    }
+  ],
+  "aiNativeRoadmap": [
+    {
+      "stage": "STAGE 1",
+      "year": "2026",
+      "title": "AI Native 전환 모델 구축",
+      "description": "제조 자동화 섹터에서 전환 모델 정립 및 검증",
+      "status": "completed"
+    },
+    {
+      "stage": "STAGE 2",
+      "year": "2026",
+      "title": "전용 AgenticOS 플랫폼 구축",
+      "description": "온톨로지 기반 에이전트 운영 플랫폼 자체 구축",
+      "status": "in_progress"
+    },
+    {
+      "stage": "STAGE 3",
+      "year": "2026",
+      "title": "AI Native 전환 사업 확장 – 부동산 섹터",
+      "description": "토지개발·부동산 섹터로 전환 사업 확장",
+      "status": "in_progress"
+    },
+    {
+      "stage": "STAGE 4",
+      "year": "2027",
+      "title": "AI Native 전환 사업 확장 – 의료 영역",
+      "description": "의료 영역으로 전환 사업 확장",
+      "status": "planned"
+    },
+    {
+      "stage": "STAGE 5",
+      "year": "2027",
+      "title": "AGI 수준 AgenticOS 플랫폼 고도화",
+      "description": "AGI 수준의 자율 운영을 목표로 플랫폼 고도화",
       "status": "planned"
     }
   ]

@@ -33,6 +33,15 @@ const config: Config = {
           '100': '#f3e8ff',
           '50': '#faf5ff',
         },
+        // Cinematic dark surfaces (umbrella redesign)
+        ink: {
+          DEFAULT: '#0a0e17',
+          950: '#070a11',
+          900: '#0a0e17',
+          800: '#10151f',
+          700: '#171d2b',
+          600: '#232b3d',
+        },
         success: {
           '900': '#14532d',
           '800': '#166534',

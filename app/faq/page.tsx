@@ -129,15 +129,18 @@ export default function FAQPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="pt-20">
+      <main id="main-content" className="bg-ink-900">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-primary-50 to-white py-16 lg:py-24">
+        <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-[radial-gradient(circle_at_50%_0%,rgba(96,165,250,0.12),transparent_60%)]">
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-accent-400">
+                FAQ
+              </p>
+              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
                 자주 묻는 질문
               </h1>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-400">
                 AI 펫닥터 서비스 이용에 대한 궁금증을 해결해드립니다
               </p>
             </div>
@@ -145,7 +148,7 @@ export default function FAQPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="section bg-white">
+        <section className="section pb-24 lg:pb-32">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               {/* Category Tabs */}
@@ -156,8 +159,8 @@ export default function FAQPage() {
                     onClick={() => setActiveCategory(category.id)}
                     className={`px-6 py-2 rounded-full font-medium transition-colors ${
                       activeCategory === category.id
-                        ? 'bg-primary-900 text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        ? 'bg-white text-ink-900'
+                        : 'bg-white/[0.03] border border-white/10 text-gray-300 hover:bg-white/[0.06]'
                     }`}
                   >
                     {category.label}
@@ -170,14 +173,14 @@ export default function FAQPage() {
                 {filteredFAQ.map(item => (
                   <div
                     key={item.id}
-                    className="border border-gray-200 rounded-xl overflow-hidden"
+                    className="border border-white/10 rounded-2xl overflow-hidden bg-white/[0.03]"
                   >
                     <button
                       onClick={() => toggleItem(item.id)}
-                      className="w-full px-6 py-5 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-colors"
+                      className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-white/[0.06] transition-colors"
                       aria-expanded={openItems.includes(item.id)}
                     >
-                      <span className="font-semibold text-gray-900 pr-4">
+                      <span className="font-semibold text-white pr-4">
                         {item.question}
                       </span>
                       <svg
@@ -198,8 +201,8 @@ export default function FAQPage() {
                       </svg>
                     </button>
                     {openItems.includes(item.id) && (
-                      <div className="px-6 pb-5 bg-gray-50">
-                        <p className="text-gray-600 leading-relaxed">
+                      <div className="px-6 pb-5">
+                        <p className="text-gray-400 leading-relaxed">
                           {item.answer}
                         </p>
                       </div>
@@ -209,23 +212,23 @@ export default function FAQPage() {
               </div>
 
               {/* Contact CTA */}
-              <div className="mt-16 p-8 bg-primary-50 rounded-2xl text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <div className="mt-16 p-8 bg-white/[0.03] border border-white/10 rounded-2xl text-center">
+                <h3 className="text-xl font-bold text-white mb-2">
                   원하시는 답변을 찾지 못하셨나요?
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-400 mb-6">
                   고객센터로 문의해주시면 빠르게 답변드리겠습니다.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="/contact"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-primary-900 text-white rounded-lg font-semibold hover:bg-primary-800 transition-colors"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-white text-ink-900 rounded-lg font-semibold transition-all hover:-translate-y-0.5 hover:bg-blue-50"
                   >
                     문의하기
                   </a>
                   <a
                     href="mailto:support@inervet.com"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-900 border border-primary-900 rounded-lg font-semibold hover:bg-primary-50 transition-colors"
+                    className="inline-flex items-center justify-center px-6 py-3 border border-white/40 text-white rounded-lg font-semibold transition-colors hover:border-white hover:bg-white/10"
                   >
                     이메일 보내기
                   </a>

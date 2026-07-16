@@ -1,4 +1,5 @@
 import companyData from '@/data/company.json'
+import Reveal from '@/components/common/Reveal'
 
 export default function ContactInfo() {
   const { office, company } = companyData
@@ -69,32 +70,36 @@ export default function ContactInfo() {
   ]
 
   return (
-    <section className="section bg-gray-50">
+    <section className="border-t border-white/5 py-24 lg:py-32">
       <div className="container-custom">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              연락처 정보
-            </h2>
-            <p className="text-lg text-gray-600">
-              {company.nameKo}
-            </p>
-          </div>
+          <Reveal>
+            <div className="text-center mb-12">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-accent-400">
+                Get in Touch
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                연락처 정보
+              </h2>
+              <p className="text-lg text-gray-400">
+                {company.nameKo}
+              </p>
+            </div>
+          </Reveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactItems.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-900 mb-4">
-                  {item.icon}
+              <Reveal key={item.label} delay={index * 0.08}>
+                <div className="h-full bg-white/[0.03] border border-white/10 rounded-2xl p-6 transition-colors hover:border-white/20">
+                  <div className="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center text-accent-400 mb-4">
+                    {item.icon}
+                  </div>
+                  <div className="text-sm font-semibold text-gray-500 mb-2">{item.label}</div>
+                  <div className="text-white font-medium whitespace-pre-line">
+                    {item.value}
+                  </div>
                 </div>
-                <div className="text-sm font-semibold text-gray-500 mb-2">{item.label}</div>
-                <div className="text-gray-900 font-medium whitespace-pre-line">
-                  {item.value}
-                </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
