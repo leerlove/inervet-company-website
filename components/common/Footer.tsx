@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { EXTERNAL_LINKS } from '@/constants/externalLinks'
 
 const BUSINESS_LINKS = [
@@ -42,11 +43,14 @@ export default function Footer() {
         <div className="mb-12 grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div>
-            <div className="mb-4 flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-accent-600 text-lg font-bold text-white">
-                I
-              </span>
-              <span className="text-xl font-bold text-white">INERVET</span>
+            <div className="mb-4">
+              <Image
+                src="/logo-dark.png"
+                alt="INERVET"
+                width={486}
+                height={106}
+                className="h-9 w-auto"
+              />
             </div>
             <p className="text-sm leading-relaxed text-gray-400">
               직접 만들고 운영하는 AI 실행력으로,

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Header from '@/components/common/Header'
 import Footer from '@/components/common/Footer'
 import ScrollToTop from '@/components/common/ScrollToTop'
@@ -23,6 +24,8 @@ const FEATURES = [
   { title: '증상 상담', desc: '구토·설사·피부 등 증상을 설명하면 AI가 맞춤 분석과 안내를 제공합니다.' },
   { title: '응급 안내', desc: '새벽에도 지금 병원에 가야 할지, 어떻게 대처할지 즉시 안내합니다.' },
   { title: '맞춤 리포트', desc: '우리 아이의 상태를 정리한 맞춤형 분석 리포트를 받아볼 수 있습니다.' },
+  { title: '펫존', desc: '지도 기반으로 반려동물과 함께 갈 수 있는 장소 정보를 찾아볼 수 있습니다.' },
+  { title: '핫플레이스', desc: '반려동물 동반 업체를 소개하는 매거진으로 새로운 곳을 발견하세요.' },
 ]
 
 export default function PetDoctorPage() {
@@ -38,6 +41,14 @@ export default function PetDoctorPage() {
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.35em] text-accent-400">
                 Product · AI Pet Doctor
               </p>
+              <Image
+                src="/logo-aipetdoctor.svg"
+                alt="AI 펫닥터"
+                width={300}
+                height={150}
+                priority
+                className="mb-8 h-14 w-auto sm:h-16"
+              />
               <h1 className="max-w-4xl text-4xl font-bold leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">
                 24시간 반려동물
                 <br />
@@ -110,7 +121,7 @@ export default function PetDoctorPage() {
                 꼭 필요한 순간에, 바로
               </h2>
             </Reveal>
-            <div className="mt-14 grid gap-6 md:grid-cols-3">
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {FEATURES.map((f, i) => (
                 <Reveal key={f.title} delay={i * 0.1}>
                   <div className="h-full rounded-2xl border border-white/10 bg-white/[0.03] p-8 transition-colors hover:border-accent-500/50">

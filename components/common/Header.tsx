@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { EXTERNAL_LINKS } from '@/constants/externalLinks'
 
 const BUSINESS = [
@@ -36,12 +37,16 @@ export default function Header() {
     >
       <nav className="container-custom py-4">
         <div className="flex items-center justify-between">
-          {/* Logo (wordmark — 다크 배경 대응) */}
-          <Link href="/" className="group flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-accent-600 text-lg font-bold text-white">
-              I
-            </span>
-            <span className="text-xl font-bold tracking-tight text-white">INERVET</span>
+          {/* Logo (다크 배경 최적화 변형 — 다이아몬드 원본 색상 유지, 텍스트만 화이트) */}
+          <Link href="/" className="group flex items-center" aria-label="INERVET 홈">
+            <Image
+              src="/logo-dark.png"
+              alt="INERVET"
+              width={486}
+              height={106}
+              priority
+              className="h-9 w-auto transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop nav */}

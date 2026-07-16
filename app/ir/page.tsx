@@ -11,18 +11,19 @@ import RoadmapSection from '@/components/ir/RoadmapSection'
 import CTASection from '@/components/ir/CTASection'
 
 export const metadata: Metadata = {
-  title: '투자 정보 (IR) | INERVET - AI 펫 헬스케어',
+  title: '투자 정보 (IR) | INERVET - AI 네이티브 전환 회사',
   description:
-    'INERVET 투자 정보. Seed 투자 4억원 모집, 3년 내 5배 ROI. TAM 2조 1600억, 만족도 98%, 18,000건 상담 검증. 펫 디지털 전환을 선도하는 글로벌 AI 펫 헬스케어 기업에 투자하세요.',
+    'INERVET 투자 정보. Seed 라운드. AI 네이티브 전환 컨설팅과 AI 펫닥터, 두 축으로 성장하는 회사. TAM 2조 1600억, 만족도 98%, 18,000건 상담 검증, 제조업 전환 비용 45%+ 절감. AI 네이티브 전환을 선도하는 INERVET에 투자하세요.',
   keywords: [
     'INERVET',
     '투자',
     'IR',
     'Seed',
+    'AI 네이티브 전환',
+    'AI 컨설팅',
     'AI 펫 헬스케어',
     '펫테크',
     '스타트업 투자',
-    'ROI',
   ],
 }
 

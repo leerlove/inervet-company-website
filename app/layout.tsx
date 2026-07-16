@@ -9,20 +9,23 @@ export const metadata: Metadata = {
   creator: 'INERVET',
   publisher: 'INERVET',
 
+  // 상대 경로 이미지·URL 해석 기준 (미설정 시 빌드 경고 발생)
+  metadataBase: new URL('https://inervet.com'),
+
   // Open Graph
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
     url: 'https://inervet.com',
     siteName: 'INERVET',
-    title: 'AI 펫닥터 INERVET | 24시간 반려동물 건강 상담 서비스',
-    description: '반려동물이 아플 때 24시간 언제든 수의사와 상담하세요. AI 증상 분석과 실시간 영상 상담으로 18,000건 이상의 상담 완료.',
+    title: 'INERVET | AI 네이티브 전환 회사',
+    description: 'FDE가 직접 고객사에 투입되어 온톨로지 기반으로 기업 맞춤 AI 네이티브 전환을 설계·구축합니다. AI 펫닥터를 만든 팀의 실행력으로.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'INERVET AI 펫닥터',
+        alt: 'INERVET - AI 네이티브 전환 회사',
       },
     ],
   },
@@ -30,9 +33,9 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 펫닥터 INERVET | 24시간 반려동물 건강 상담 서비스',
-    description: '반려동물이 아플 때 24시간 언제든 수의사와 상담하세요.',
-    images: ['/images/twitter-image.jpg'],
+    title: 'INERVET | AI 네이티브 전환 회사',
+    description: 'FDE·온톨로지 기반 기업 맞춤 AI 네이티브 전환. AI 펫닥터를 만든 팀의 실행력으로.',
+    images: ['/images/og-image.jpg'],
   },
 
   // Verification
