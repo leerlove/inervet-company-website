@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="100%" overflow="visible" preserveAspectRatio="none" style="display: block;" viewBox="0 0 5.76659 2.74315" width="100%">
+<g id="Battery">
+<rect height="2.53214" id="Border" opacity="0.35" rx="0.801845" stroke="var(--stroke-0, #F9FAFB)" stroke-width="0.211012" width="5.06428" x="0.105506" y="0.105506"/>
+<path d="M5.48635 1.00901V1.86899C5.65616 1.79615 5.76659 1.62672 5.76659 1.439C5.76659 1.25128 5.65616 1.08185 5.48635 1.00901" fill="var(--fill-0, #F9FAFB)" id="Cap" opacity="0.4"/>
+<rect fill="var(--fill-0, #F9FAFB)" height="1.89911" id="Capacity" rx="0.52753" width="4.43125" x="0.422054" y="0.422163"/>
+</g>
+</svg>

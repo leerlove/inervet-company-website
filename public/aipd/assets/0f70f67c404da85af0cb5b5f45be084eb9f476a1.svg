@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="100%" overflow="visible" preserveAspectRatio="none" style="display: block;" viewBox="0 0 24 24" width="100%">
+<g id="Frame">
+<path d="M18.6748 2.94855H4.91428C3.82861 2.94855 2.9485 3.82866 2.9485 4.91434V18.6748C2.9485 19.7605 3.82861 20.6406 4.91428 20.6406H18.6748C19.7604 20.6406 20.6405 19.7605 20.6405 18.6748V4.91434C20.6405 3.82866 19.7604 2.94855 18.6748 2.94855Z" fill="var(--fill-0, #22C5CE)" id="Vector" stroke="var(--stroke-0, #22C5CE)" stroke-linecap="round" stroke-width="1.47434"/>
+<path d="M8.84587 10.8117C9.93155 10.8117 10.8117 9.9316 10.8117 8.84593C10.8117 7.76025 9.93155 6.88014 8.84587 6.88014C7.7602 6.88014 6.88009 7.76025 6.88009 8.84593C6.88009 9.9316 7.7602 10.8117 8.84587 10.8117Z" fill="var(--fill-0, white)" id="Vector_2" stroke="var(--stroke-0, white)" stroke-linecap="round" stroke-width="1.47434"/>
+<path d="M18.2815 14.7431V11.205C17.9129 10.8364 17.413 10.6294 16.8917 10.6294C16.3705 10.6294 15.8706 10.8364 15.5019 11.205L6.48684 18.2815H18.2815V14.7431Z" fill="var(--fill-0, white)" id="Vector_3" stroke="var(--stroke-0, white)" stroke-linecap="round" stroke-width="1.47434"/>
+</g>
+</svg>

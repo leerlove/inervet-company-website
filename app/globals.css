@@ -28,6 +28,27 @@
     @apply font-bold text-white;
   }
 
+  /*
+   * AI 펫닥터(aipetdoctor.co.kr) 라이트 테마.
+   * 전역 기본은 INERVET 다크이므로, 펫 사이트는 이 스코프로 되돌린다.
+   */
+  .theme-pet {
+    @apply bg-white text-gray-700;
+  }
+
+  .theme-pet h1,
+  .theme-pet h2,
+  .theme-pet h3,
+  .theme-pet h4,
+  .theme-pet h5,
+  .theme-pet h6 {
+    @apply text-gray-900;
+  }
+
+  .theme-pet ::selection {
+    @apply bg-pet-200 text-pet-900;
+  }
+
   /* Focus visible styles for accessibility */
   *:focus-visible {
     @apply outline-2 outline-offset-2 outline-primary-500 ring-2 ring-primary-500 ring-offset-2;

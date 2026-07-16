@@ -33,6 +33,20 @@ const config: Config = {
           '100': '#f3e8ff',
           '50': '#faf5ff',
         },
+        // AI 펫닥터 브랜드 (aipetdoctor.co.kr) — 틸 계열, 라이트 테마용
+        pet: {
+          DEFAULT: '#39CBD3',
+          50: '#effcfd',
+          100: '#d3f6f8',
+          200: '#adedf1',
+          300: '#73dfe7',
+          400: '#39cbd3', // 브랜드 메인
+          500: '#1dadb8',
+          600: '#188b97',
+          700: '#1a707b',
+          800: '#1c5c65',
+          900: '#1c4d55',
+        },
         // Cinematic dark surfaces (umbrella redesign)
         ink: {
           DEFAULT: '#0a0e17',
