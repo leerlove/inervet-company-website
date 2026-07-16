@@ -22,9 +22,10 @@ export default function ProofSection() {
             우리는 말이 아니라
             <br className="sm:hidden" /> 제품으로 증명합니다
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-gray-400">
-            AI 펫닥터는 실제로 시장에서 돌아가는 서비스입니다. 데모가 아니라 운영
-            지표가, 우리의 AI 실행력을 증명합니다.
+          <p className="mt-5 max-w-3xl text-base leading-relaxed text-gray-400">
+            AI 펫닥터는 AI 기반의 초개인화 펫 헬스케어 글로벌 서비스입니다. AI 네이티브
+            전환을 통해 기존 12명이 하던 운영을 단 3명으로 줄이고, 고객 대응 속도를
+            200% 이상 높이는 성과를 달성했습니다.
           </p>
         </Reveal>
 

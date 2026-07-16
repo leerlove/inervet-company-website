@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { EXTERNAL_LINKS } from '@/constants/externalLinks'
 
 const BUSINESS_LINKS = [
   { name: 'AI 네이티브 전환', href: '/transformation', external: false },
-  { name: 'AI 펫닥터', href: EXTERNAL_LINKS.APP_MAIN, external: true },
+  { name: 'AI 펫 헬스케어', href: '/pet-doctor', external: false },
 ]
 
 const COMPANY_LINKS = [

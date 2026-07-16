@@ -138,10 +138,10 @@ export default function CinematicHero() {
             AI Native Transformation
           </p>
           <h1 className="max-w-4xl text-4xl font-bold leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">
-            AI 펫닥터로 증명했습니다.
+            AI 네이티브 전환을 통해
             <br />
             <span className="bg-gradient-to-r from-primary-300 via-accent-300 to-primary-200 bg-clip-text text-transparent">
-              다음은 당신의 산업입니다.
+              기업의 혁신을 달성하고 있습니다.
             </span>
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-blue-100/90 sm:text-lg">

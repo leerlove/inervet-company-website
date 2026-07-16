@@ -1,5 +1,4 @@
 import Reveal from '@/components/common/Reveal'
-import { EXTERNAL_LINKS } from '@/constants/externalLinks'
 
 /** 두 사업 기둥 — 대등 카드 (Lunit식 명료함) */
 
@@ -17,10 +16,10 @@ const PILLARS = [
   },
   {
     tag: 'Product · B2C',
-    title: 'AI 펫닥터',
+    title: 'AI 펫 헬스케어 서비스',
     desc: '우리가 직접 만들고 운영하는 첫 AI 제품. 수만 건의 상담으로 우리의 AI 실행력을 시장에서 증명하고 있습니다.',
-    href: EXTERNAL_LINKS.APP_MAIN,
-    external: true,
+    href: '/pet-doctor',
+    external: false,
     cta: '서비스 보기',
     ring: 'hover:border-accent-500/60',
     glow: 'from-accent-500/20',

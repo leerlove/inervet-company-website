@@ -236,14 +236,14 @@
       "year": "2025",
       "title": "AI 펫 헬스케어 서비스 안착",
       "description": "의료, 건강, 영양까지 개인화 확대",
-      "status": "in_progress"
+      "status": "completed"
     },
     {
       "stage": "3.0 STAGE 3",
       "year": "2026",
       "title": "수익 모델 확대",
       "description": "보험, 펀드 등 수익 모델 확대",
-      "status": "planned"
+      "status": "in_progress"
     },
     {
       "stage": "Global STAGE 4",
@@ -264,6 +264,43 @@
       "year": "2029",
       "title": "EXIT (M&A)",
       "description": "글로벌 펫 기업 M&A",
+      "status": "planned"
+    }
+  ],
+  "aiNativeRoadmap": [
+    {
+      "stage": "STAGE 1",
+      "year": "2026",
+      "title": "AI Native 전환 모델 구축",
+      "description": "제조 자동화 섹터에서 전환 모델 정립 및 검증",
+      "status": "completed"
+    },
+    {
+      "stage": "STAGE 2",
+      "year": "2026",
+      "title": "전용 AgenticOS 플랫폼 구축",
+      "description": "온톨로지 기반 에이전트 운영 플랫폼 자체 구축",
+      "status": "in_progress"
+    },
+    {
+      "stage": "STAGE 3",
+      "year": "2026",
+      "title": "AI Native 전환 사업 확장 – 부동산 섹터",
+      "description": "토지개발·부동산 섹터로 전환 사업 확장",
+      "status": "in_progress"
+    },
+    {
+      "stage": "STAGE 4",
+      "year": "2027",
+      "title": "AI Native 전환 사업 확장 – 의료 영역",
+      "description": "의료 영역으로 전환 사업 확장",
+      "status": "planned"
+    },
+    {
+      "stage": "STAGE 5",
+      "year": "2027",
+      "title": "AGI 수준 AgenticOS 플랫폼 고도화",
+      "description": "AGI 수준의 자율 운영을 목표로 플랫폼 고도화",
       "status": "planned"
     }
   ]
