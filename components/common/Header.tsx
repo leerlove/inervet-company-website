@@ -13,7 +13,8 @@ const NAV = [
   { name: '문의', href: '/contact' },
 ]
 
-export default function Header() {
+export default function Header({ tone = 'dark' }: { tone?: 'dark' | 'light' } = {}) {
+  const light = tone === 'light'
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -27,9 +28,13 @@ export default function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled || mobileOpen
-          ? 'border-b border-white/10 bg-ink-900/90 backdrop-blur-md'
-          : 'border-b border-transparent bg-transparent'
+        light
+          ? scrolled || mobileOpen
+            ? 'border-b border-slate-200 bg-white/90 backdrop-blur-md'
+            : 'border-b border-transparent bg-transparent'
+          : scrolled || mobileOpen
+            ? 'border-b border-white/10 bg-ink-900/90 backdrop-blur-md'
+            : 'border-b border-transparent bg-transparent'
       }`}
     >
       <nav className="container-custom py-4">
@@ -37,7 +42,7 @@ export default function Header() {
           {/* Logo (다크 배경 최적화 변형 — 다이아몬드 원본 색상 유지, 텍스트만 화이트) */}
           <Link href="/" className="group flex items-center" aria-label="INERVET 홈">
             <Image
-              src="/logo-dark.png"
+              src={light ? '/logo.png' : '/logo-dark.png'}
               alt="INERVET"
               width={486}
               height={106}
@@ -52,7 +57,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="whitespace-nowrap text-sm font-medium text-gray-200 transition-colors hover:text-white"
+                className={`whitespace-nowrap text-sm font-medium transition-colors ${light ? 'text-slate-700 hover:text-slate-950' : 'text-gray-200 hover:text-white'}`}
               >
                 {item.name}
               </Link>
@@ -62,13 +67,13 @@ export default function Header() {
           {/* CTA + mobile toggle */}
           <div className="flex items-center gap-4">
             <Link
-              href="/contact"
-              className="hidden whitespace-nowrap rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-primary-900 transition-all hover:-translate-y-0.5 hover:bg-blue-50 sm:block"
+              href={light ? '/ax#apply' : '/contact'}
+              className={`hidden whitespace-nowrap rounded-lg px-5 py-2.5 text-sm font-semibold transition-all hover:-translate-y-0.5 sm:block ${light ? 'bg-slate-950 text-white hover:bg-slate-800' : 'bg-white text-primary-900 hover:bg-blue-50'}`}
             >
-              AI 전환 문의
+              {light ? '무료 점검 신청' : 'AI 전환 문의'}
             </Link>
             <button
-              className="p-2 text-gray-200 transition-colors hover:text-white lg:hidden"
+              className={`p-2 transition-colors lg:hidden ${light ? 'text-slate-700 hover:text-slate-950' : 'text-gray-200 hover:text-white'}`}
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="메뉴 열기"
             >
@@ -86,13 +91,13 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="mt-4 border-t border-white/10 pt-4 lg:hidden">
+          <div className={`mt-4 border-t pt-4 lg:hidden ${light ? 'border-slate-200' : 'border-white/10'}`}>
             <div className="flex flex-col gap-1">
               {NAV.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="rounded-lg px-3 py-2.5 text-gray-200 transition-colors hover:bg-white/5 hover:text-white"
+                  className={`rounded-lg px-3 py-2.5 transition-colors ${light ? 'text-slate-700 hover:bg-slate-100' : 'text-gray-200 hover:bg-white/5 hover:text-white'}`}
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.name}
