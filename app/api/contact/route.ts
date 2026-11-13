@@ -21,9 +21,10 @@ const INQUIRY_LABELS: Record<string, string> = {
   general: '일반 문의',
   investment: '투자 문의',
   partnership: '파트너 문의',
+  ax: '무료 AI 전환 점검 신청',
 }
 
-const MAX = { name: 100, email: 200, phone: 40, subject: 200, message: 5000 }
+const MAX = { name: 100, email: 200, phone: 40, subject: 200, message: 5000, org: 200, size: 40 }
 
 const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
 
@@ -45,7 +46,8 @@ export async function POST(request: Request) {
   }
 
   // 허니팟: 사람에게는 보이지 않는 필드. 봇이 채우면 조용히 무시(성공으로 응답)
-  if (str(body.company)) {
+  // 'company'처럼 브라우저 자동완성이 채우는 이름은 실제 신청을 버리게 되므로 hp_field를 쓴다
+  if (str(body.hp_field)) {
     return NextResponse.json({ ok: true })
   }
 
@@ -55,6 +57,9 @@ export async function POST(request: Request) {
   const phone = str(body.phone)
   const subject = str(body.subject)
   const message = str(body.message)
+  // 기업 AI 전환 점검(/ax) 전용 필드. 회사명은 'org'로 받는다
+  const org = str(body.org)
+  const size = str(body.size)
 
   const invalid: string[] = []
   if (!name || name.length > MAX.name) invalid.push('이름')
@@ -62,6 +67,9 @@ export async function POST(request: Request) {
   if (!subject || subject.length > MAX.subject) invalid.push('제목')
   if (!message || message.length > MAX.message) invalid.push('문의 내용')
   if (phone.length > MAX.phone) invalid.push('전화번호')
+  if (org.length > MAX.org) invalid.push('회사명')
+  if (size.length > MAX.size) invalid.push('회사 규모')
+  if (inquiryType === 'ax' && (!org || !phone)) invalid.push('회사명·연락처')
 
   if (invalid.length > 0) {
     return NextResponse.json(
@@ -97,6 +105,8 @@ export async function POST(request: Request) {
 
   const text = [
     `문의 유형: ${label}`,
+    ...(org ? [`회사명: ${org}`] : []),
+    ...(size ? [`회사 규모: ${size}`] : []),
     `이름: ${name}`,
     `이메일: ${email}`,
     `전화번호: ${phone || '미입력'}`,
@@ -110,6 +120,8 @@ export async function POST(request: Request) {
     <div style="font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.7;color:#111">
       <h2 style="margin:0 0 16px">[${esc(label)}] ${esc(subject)}</h2>
       <table style="border-collapse:collapse;margin-bottom:20px">
+        ${org ? `<tr><td style="padding:4px 12px 4px 0;color:#666">회사명</td><td>${esc(org)}</td></tr>` : ''}
+        ${size ? `<tr><td style="padding:4px 12px 4px 0;color:#666">회사 규모</td><td>${esc(size)}</td></tr>` : ''}
         <tr><td style="padding:4px 12px 4px 0;color:#666">이름</td><td>${esc(name)}</td></tr>
         <tr><td style="padding:4px 12px 4px 0;color:#666">이메일</td><td>${esc(email)}</td></tr>
         <tr><td style="padding:4px 12px 4px 0;color:#666">전화번호</td><td>${esc(phone || '미입력')}</td></tr>
