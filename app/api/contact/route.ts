@@ -46,7 +46,8 @@ export async function POST(request: Request) {
   }
 
   // 허니팟: 사람에게는 보이지 않는 필드. 봇이 채우면 조용히 무시(성공으로 응답)
-  if (str(body.company)) {
+  // 'company'처럼 브라우저 자동완성이 채우는 이름은 실제 신청을 버리게 되므로 hp_field를 쓴다
+  if (str(body.hp_field)) {
     return NextResponse.json({ ok: true })
   }
 
@@ -56,7 +57,7 @@ export async function POST(request: Request) {
   const phone = str(body.phone)
   const subject = str(body.subject)
   const message = str(body.message)
-  // 기업 AI 전환 점검(/ax) 전용 필드. 'company'는 허니팟이므로 회사명은 'org'로 받는다
+  // 기업 AI 전환 점검(/ax) 전용 필드. 회사명은 'org'로 받는다
   const org = str(body.org)
   const size = str(body.size)
 

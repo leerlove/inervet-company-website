@@ -12,7 +12,7 @@ const EMPTY = {
   phone: '',
   size: '',
   message: '',
-  company: '', // 허니팟: 사람은 비워둔다
+  hp_field: '', // 허니팟: 사람은 비워둔다 (브라우저 자동완성 대상이 아닌 이름 사용)
 }
 
 export default function AxForm() {
@@ -95,8 +95,8 @@ export default function AxForm() {
 
         <form onSubmit={onSubmit} className="rounded-3xl border border-slate-200 bg-[#F4F6FA] p-6 sm:p-10" noValidate={false}>
           <div className="absolute -left-[9999px]" aria-hidden="true">
-            <label htmlFor="ax-company">입력하지 마세요</label>
-            <input id="ax-company" name="company" tabIndex={-1} autoComplete="off" value={form.company} onChange={onChange} />
+            <label htmlFor="ax-hp">이 칸은 비워 두세요</label>
+            <input id="ax-hp" name="hp_field" tabIndex={-1} autoComplete="new-password" value={form.hp_field} onChange={onChange} />
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">

@@ -12,7 +12,7 @@ const EMPTY_FORM = {
   phone: '',
   subject: '',
   message: '',
-  company: '', // 허니팟: 사람은 비워둔다. 값이 차 있으면 서버가 봇으로 간주
+  hp_field: '', // 허니팟: 사람은 비워둔다. 값이 차 있으면 서버가 봇으로 간주 (자동완성 대상이 아닌 이름 사용)
 }
 
 export default function ContactForm() {
@@ -95,14 +95,14 @@ export default function ContactForm() {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* 허니팟 — 화면·스크린리더 모두에서 숨김. 봇이 채우면 서버가 걸러낸다 */}
               <div className="absolute -left-[9999px]" aria-hidden="true">
-                <label htmlFor="company">회사명 (입력하지 마세요)</label>
+                <label htmlFor="hp_field">이 칸은 비워 두세요</label>
                 <input
                   type="text"
-                  id="company"
-                  name="company"
+                  id="hp_field"
+                  name="hp_field"
                   tabIndex={-1}
-                  autoComplete="off"
-                  value={formData.company}
+                  autoComplete="new-password"
+                  value={formData.hp_field}
                   onChange={handleChange}
                 />
               </div>
